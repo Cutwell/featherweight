@@ -37,4 +37,4 @@ gem "jekyll-sitemap", "~> 1.4"
 
 gem "kramdown", "~> 2.4"
 
-gem "liquid", "~> 4.0"
+gem "liquid-c", "~> 4.0"
