@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<p>Hi, I'm {{ site.author }}!
+<p>{% include_relative _pages/about.md %}
+<p>{% for link in site.personals %}{{ link.name }}: <a href="{{ link.url }}">{{ link.url }}</a><br>{% endfor %}
+<p>Resume:
+<p>{% for exp in site.resume %}{{ exp.title }}, {{ exp.company }}, {{exp.dates}}<br>{% endfor %}
+<p>Blog posts:
+<ul>{% for post in site.posts %}<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} - {{ post.date | date: "%B %e, %Y" }}</a>{% endfor %}

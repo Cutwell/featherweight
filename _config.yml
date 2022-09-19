@@ -1,0 +1,74 @@
+# website title (appears in tab and headers)
+name: Featherweight
+
+# website author
+author: Zachary Smith
+
+# site favicon (filepath from root) (leave empty for empty favicon, saving 400 bytes of bandwidth)
+favicon:
+
+# includes links to personal sites in the website introduction, add/remove entries using template format
+personals:
+  - name: Email
+    url: this@that.com
+  - name: GitHub
+    url: https://cutwell.github.io/
+  - name: LinkedIn 
+    url: https://www.linkedin.com/in/zacharysmith5/
+  - name: Twitter 
+    url: https://twitter.com/zacharyoffline
+
+# academic/industry experience, add/remove entries using template format
+resume:
+  - title: BSc Computer Science (1st)
+    company: University of Plymouth
+    dates: 2018-21
+  - title: MSc Artificial Intelligence
+    company: University of Plymouth
+    dates: 2021-22 
+
+# domain URL (use https to enforce SSL)
+# if website root is at subdirectory of domain URL (e.g.: "https://cutwell.github.io/mywebsite"), then write that URL here
+url: https://cutwell.github.io/
+
+permalink: /:title/
+
+# Jekyll Now version
+version: v1.2.0
+
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+include: ['_pages']
+
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+# use https://github.com/penibelst/jekyll-compress-html for extra bandwidth compression
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+# RSS feed settings
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
