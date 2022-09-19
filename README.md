@@ -1,5 +1,9 @@
 `Featherweight` is an ultra-lightweight Jekyll theme, aiming to minimise bandwidth usage and deliver a bare-bones experience (page sizes of ~1kb). 
 
+[![Gem Version](https://img.shields.io/gem/v/featherweight?style=flat-square)][ruby-gems]
+[ruby-gems]: https://rubygems.org/gems/featherweight
+
+
 **Replacing X with Y**
 |X|Y|
 |:--:|:--:|
