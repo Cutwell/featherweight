@@ -8,8 +8,8 @@
 |Sharing links|_Copy/paste the URL_|
 
 **Getting started**
-1. Customise website ownership, etc., using `_config.yml`.
-2. Update `_pages/resume.md` and `_pages/about.md` with your own history.
+1. Customise website ownership, update personal links, and detail CV experience using `_config.yml`.
+2. Update `_pages/about.md` with an introduction.
 3. Write some blogs, using `_posts/test.md` as a template.
 4. You're ready to host your minimalist site!
 
