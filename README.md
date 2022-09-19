@@ -1,4 +1,4 @@
-`Featherweight` is an ultra-lightweight Jekyll theme, aiming to minimise bandwidth usage and deliver a bare-bones experience.
+`Featherweight` is an ultra-lightweight Jekyll theme, aiming to minimise bandwidth usage and deliver a bare-bones experience (page sizes of ~1kb). 
 
 **Replacing X with Y**
 |X|Y|
