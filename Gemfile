@@ -38,3 +38,5 @@ gem "jekyll-sitemap", "~> 1.4"
 gem "kramdown", "~> 2.4"
 
 gem "liquid-c", "~> 4.0"
+
+gem 'jekyll-loading-lazy'
