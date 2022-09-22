@@ -39,4 +39,4 @@ gem "kramdown", "~> 2.4"
 
 gem "liquid-c", "~> 4.0"
 
-gem 'jekyll-loading-lazy'
+gem 'jekyll-loading-lazy', '~> 0.1.1'
