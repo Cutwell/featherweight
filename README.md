@@ -26,6 +26,8 @@ If you're using this site on GitHub pages, the built-in build action won't run g
 
 To enable these gems, use the `build_and_deploy.yml` action under `.github/workflows` to automatically build your site on pushes, which circumvents this restriction while still hosting to GitHub pages (as advised by [Jekyll](https://jekyllrb.com/docs/continuous-integration/github-actions/)).
 
+The workflow pushes the build to `gh-pages` branch by default, so make sure this exists and your pages settings points towards it.
+
 **Notes**
 
 |||
