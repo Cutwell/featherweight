@@ -19,4 +19,3 @@ jobs:
         with:                                # Some relative inputs of your action
           token: ${{ secrets.user_token }}
           target_branch: gh-pages
-          target_path: /featherweight
