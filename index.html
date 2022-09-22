@@ -8,4 +8,4 @@ layout: default
 <p>Resume:
 <p>{% for exp in site.resume %}{{ exp.title }}, {{ exp.company }}, {{exp.dates}}<br>{% endfor %}
 <p>Blog posts:
-<ul>{% for post in site.posts %}<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} - {{ post.date | date: "%B %e, %Y" }}</a>{% endfor %}
+<ul>{% for post in site.posts %}<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }} - {{ post.date | date: "%B %e, %Y" }}</a>{% endfor %}
