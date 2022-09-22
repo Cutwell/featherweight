@@ -29,7 +29,7 @@ resume:
 
 # domain URL (use https to enforce SSL)
 # if website root is at subdirectory of domain URL (e.g.: "https://cutwell.github.io/mywebsite"), then write that URL here
-url: https://cutwell.github.io/
+url: https://cutwell.github.io/featherweight
 
 permalink: /:title/
 
