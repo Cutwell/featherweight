@@ -4,8 +4,13 @@ name: Featherweight
 # website author
 author: Zachary Smith
 
-# site favicon (filepath from root) (leave empty for empty favicon, saving 400 bytes of bandwidth)
-favicon:
+compression:
+  favicon: # (adds ~400 bytes) site favicon (filepath from root)
+  
+  # True to enable, False to disable
+  styling: True # (adds 113 bytes) minimal inline CSS styling, adds some padding, etc., to make plaintext site deliberate (not like a render problem)
+  footer: True  # (40+length-of-social-links bytes) add personal links as footer to blog posts
+  menu: False  # (60+length-of-URL bytes) add a home link to top left corner of blog posts
 
 # includes links to personal sites in the website introduction, add/remove entries using template format
 personals:
@@ -31,6 +36,9 @@ resume:
 # if website root is at subdirectory of domain URL (e.g.: "https://cutwell.github.io/mywebsite"), then write that URL here
 url: https://cutwell.github.io/featherweight
 
+
+
+##### JEKYLL SETTINGS #####
 permalink: /:title/
 
 # Jekyll Now version

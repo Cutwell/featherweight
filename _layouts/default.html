@@ -8,10 +8,14 @@ layout: compress
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml" />
 
-{% if site.favicon %}
+{% if site.compression.favicon %}
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/{{ site.favicon }}">
 {% else %}
 <link rel="icon" href="data:,">
+{% endif %}
+
+{% if site.compression.styling %}
+<body style="font-family:sans-serif;max-width:18cm;padding:8mm 16mm;text-align:justify;text-justify:inter-word;">
 {% endif %}
 
 {{ content }}
