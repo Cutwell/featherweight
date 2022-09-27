@@ -3,7 +3,7 @@ layout: compress
 ---
 <!DOCTYPE html>
 
-<title>{{ site.name }}</title>
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml" />
@@ -15,7 +15,9 @@ layout: compress
 {% endif %}
 
 {% if site.compression.styling %}
-<body style="font-family:sans-serif;max-width:18cm;padding:8mm 16mm;text-align:justify;text-justify:inter-word;">
+<body style="max-width:80ch;padding:3em 1em;margin:auto;line-height:1.75;font-size:1.25em;font-family:sans-serif;">
 {% endif %}
 
 {{ content }}
+
+</body>

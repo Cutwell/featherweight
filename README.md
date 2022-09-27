@@ -4,15 +4,6 @@
 
 [ruby-gems]: https://rubygems.org/gems/featherweight
 
-
-#### Replacing X with Y
-
-|X|Y|
-|:--:|:--:|
-|Blog search|`ctrl+f`|
-|Post styling|[Reader view](https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages)|
-|Sharing links|_Copy/paste the URL_|
-
 #### Building on GitHub
 
 If you're using this site on GitHub pages, the built-in build action won't run gems outside of the [supported plugins list](https://pages.github.com/versions/), e.g.: the `jekyll-loading-lazy` gem (which adds `loading="lazy"` tags to `iframes` and `img` tags, enabling faster initial page loads).

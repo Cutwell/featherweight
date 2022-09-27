@@ -8,9 +8,9 @@ compression:
   favicon: # (adds ~400 bytes) site favicon (filepath from root)
   
   # True to enable, False to disable
-  styling: True # (adds 113 bytes) minimal inline CSS styling, adds some padding, etc., to make plaintext site deliberate (not like a render problem)
+  styling: True # (adds 115 bytes) minimal inline CSS styling, based on https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41. Imitates page viewer mode.
   footer: True  # (40+length-of-social-links bytes) add personal links as footer to blog posts
-  menu: False  # (60+length-of-URL bytes) add a home link to top left corner of blog posts
+  menu: True  # (105+homepage-URL bytes) add a home link to top left corner of blog posts, navigates to website root.
 
 # includes links to personal sites in the website introduction, add/remove entries using template format
 personals:
@@ -20,8 +20,8 @@ personals:
     url: https://cutwell.github.io/
   - name: LinkedIn 
     url: https://www.linkedin.com/in/zacharysmith5/
-  - name: Twitter 
-    url: https://twitter.com/zacharyoffline
+  #- name: Twitter 
+  #  url: https://twitter.com/username
 
 # academic/industry experience, add/remove entries using template format
 resume:
@@ -40,9 +40,6 @@ url: https://cutwell.github.io/featherweight
 
 ##### JEKYLL SETTINGS #####
 permalink: /:title/
-
-# Jekyll Now version
-version: v1.2.0
 
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -72,8 +69,9 @@ exclude:
 # use https://github.com/penibelst/jekyll-compress-html for extra bandwidth compression
 compress_html:
   clippings: all
-  comments: [""]
-  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  comments: ["<!-- ", " -->"]
+  endings: all
+  startings: [html, head]
   profile: false
   blanklines: false
   ignore:
