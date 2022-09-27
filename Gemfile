@@ -15,12 +15,6 @@ gem "jekyll", "~> 3.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem 'jekyll-zopfli', '~> 2.0.0'
-  gem "jekyll-sitemap", "~> 1.4"
-  gem "kramdown", "~> 2.4"
-  gem "liquid-c", "~> 4.0"
-  gem 'jekyll-loading-lazy', '~> 0.1.1'
-  gem "kramdown-parser-gfm"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -39,3 +33,9 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick", "~> 1.7"
 
+gem 'jekyll-zopfli', '~> 2.0.0'
+gem "jekyll-sitemap", "~> 1.4"
+gem "kramdown", "~> 2.4"
+gem "liquid-c", "~> 4.0"
+gem 'jekyll-loading-lazy', '~> 0.1.1'
+gem "kramdown-parser-gfm"
