@@ -39,3 +39,4 @@ gem "liquid-c", "~> 4.0"
 gem 'jekyll-loading-lazy', '~> 0.1.1'
 
 gem 'jekyll-zopfli', '~> 2.5'
+gem 'jekyll-brotli', '~> 2.3'
