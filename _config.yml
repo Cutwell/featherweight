@@ -14,8 +14,8 @@ compression:
 
 # includes links to personal sites in the website introduction, add/remove entries using template format
 personals:
-  - name: Email
-    url: this@that.com
+  #- name: Email
+  #  url: this@that.com
   - name: GitHub
     url: https://cutwell.github.io/
   - name: LinkedIn 
@@ -47,7 +47,8 @@ version: v1.2.0
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-loading-lazy
+  - jekyll-loading-lazy # adds loading="lazy" tags to images and iframes, rendering them once in view (supported browsers, ignored gracefully otherwise)
+  - jekyll-zopfli # github auto-compresses to .gz, but Zopfli offers greater compression + saves time by pre-compressing instead of doing it on-the-fly
 
 include: ['_pages']
 

@@ -46,4 +46,5 @@ When naming blog post files, use the `YYYY-MM-DD-title.md` convention, or else y
 | _RSS_ | The RSS feed can be found at <https://yourgithubusername.github.io/feed>. |
 | _Sitemap_ | The sitemap can be found at <https://yourgithubusername.github.io/sitemap>. |
 | _Quickstart_ | Test your website locally by following the [Jekyll quickstart guide](https://jekyllrb.com/docs/). |
+| _GZip compression_ | Files are compressed using [Zopfli](https://github.com/philnash/jekyll-zopfli) compression. GitHub GZip's files automatically before serving, but we can use more aggressive pre-compression to achieve better compression, and avoid server overhead to compress on-the-fly. |
 
