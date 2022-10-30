@@ -21,9 +21,9 @@
 {% endif %}
 
 {% if site.compression.icon %}
-<link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png">
-<link rel="shortcut icon" sizes="192x192" href="/img/icon-192x192.png">
-<link rel="apple-touch-icon" href="/img/icon-192x192.png">
+<link rel="shortcut icon" type="image/png" href="{{ site.compression.icon }}">
+<link rel="shortcut icon" sizes="192x192" href="{{ site.compression.icon }}">
+<link rel="apple-touch-icon" href="{{ site.compression.icon }}">
 {% endif %}
 
 <!-- include seo if enabled -->
@@ -33,7 +33,7 @@
 
 <!-- include image styling if enabled and page is post -->
 {% if site.compression.css and page.layout == "post" %}
-<style>img{width:100%;height:auto}</style>
+<style>img{max-width:100%;height:auto}</style>
 {% endif %}
 
 </head>
