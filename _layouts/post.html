@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
-{% if site.compression.menu %}
-<a href="{{ site.url }}" style="position:absolute;top:0;left:0;margin:1em;color:inherit;font-size:1em;">Return home</a>
+{% if site.compression.home-link %}
+<a style="position:absolute;top:0;left:0;margin:1em;color:inherit;font-size:1em;" href="{{ site.url }}">{% if site.home-link-text %}{{ site.home-link-text }}{% else %}Return Home{% endif %}</a>
 {% endif %}
 
-<b>{{ page.title }}</b><br><i> Written on {{ page.date | date: "%B %e, %Y" }} </i>
+<h1>{{ page.title }}</h1>
+<i>Written on {{ page.date | date: "%B %e, %Y" }}</i>
+<br><i>{% include reading-time.html %}</i>
 
 {{ content }}
 
 {% if site.compression.footer %}
-<hr>
-<p style="font-family:monospace;">{% for link in site.personals %}{{ link.name }}: <a href="{{ link.url }}">{{ link.url }}</a><br>{% endfor %}</p>
+<br><hr>
+<p>{% for link in site.social-urls %}{{ link.name }}: <a href="{{ link.url }}">{{ link.url}}</a><br>{% endfor %}</p>
 {% endif %}

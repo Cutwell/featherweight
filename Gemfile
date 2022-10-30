@@ -36,7 +36,9 @@ gem "webrick", "~> 1.7"
 gem "jekyll-sitemap", "~> 1.4"
 gem "kramdown", "~> 2.4"
 gem "liquid-c", "~> 4.0"
-gem 'jekyll-loading-lazy', '~> 0.1.1'
 
 gem 'jekyll-zopfli', '~> 2.5'
 gem 'jekyll-brotli', '~> 2.3'
+
+gem 'nokogiri', '~> 1.12', '>= 1.12.4'
+gem 'fastimage', '~> 2.2', '>= 2.2.5'

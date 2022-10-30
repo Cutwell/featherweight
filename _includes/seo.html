@@ -1,0 +1,38 @@
+<!-- metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ "/feed.xml" | prepend: site.url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.url }}" />
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+<!-- Google site verification -->
+<meta name="google-site-verification" content="{{ site.google-site-verification }}" />
+
+<!-- Facebook integration -->
+<meta property="og:title" content="{{ page.title }}"/>
+{% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.url }}"/>{% endif %}
+<meta property="og:url" content="{{ page.url | prepend: site.url }}"/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ site.name }}"/>
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+
+<!-- Twitter integration -->
+<meta name="twitter:card" content="summary">
+<!-- find twitter url in social-urls list -->
+{% if site.compression.social-urls %}
+{% for link in site.social-urls %}
+<!-- if "twitter.com" in link url -->
+{% if link.url contains "twitter.com" %}
+<meta name="twitter:site" content="{{ site.twitter_url }}">
+<!-- breakout of for loop -->
+{% break %}
+{% endif %}
+{% endfor %}
+{% endif %}
+<meta name="twitter:title" content="{{ page.title }}" />
+{% if page.image %}<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />{% endif %}
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />

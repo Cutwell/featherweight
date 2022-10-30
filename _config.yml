@@ -1,27 +1,38 @@
-# website title (appears in tab and headers)
-name: Featherweight
+# website title (appears in tab and headers if not overriden by blog title)
+name: Featherweight # (leave blank for no fallback/title element)
 
 # website author
 author: Zachary Smith
 
+description: Featherweight is an ultra-lightweight Jekyll theme, aiming to minimise bandwidth usage and deliver a bare-bones experience.
+
+lang: en # replace with ISO 639-1 Language Code for your language (or leave empty to omit the lang setting)
+
 compression:
   favicon: # (adds ~400 bytes) site favicon (filepath from root)
-  
+  icon: # shortcut icon (usually .png of your favicon, sized 192x192)
+
   # True to enable, False to disable
-  styling: True # (adds 115 bytes) minimal inline CSS styling, based on https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41. Imitates page viewer mode.
+  css: True # (adds 115 bytes) minimal inline CSS styling, based on https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41. Imitates page viewer mode.
   footer: True  # (40+length-of-social-links bytes) add personal links as footer to blog posts
-  menu: True  # (105+homepage-URL bytes) add a home link to top left corner of blog posts, navigates to website root.
+  home-link: True  # (105+homepage-URL bytes) add a home link to top left corner of blog posts, navigates to website root.
+  load-time: True # (240 bytes) show-off your page size + load speed top of the page (uses JS).
+  reading-time: True  # add reading time estimate to your blog posts.
+  seo: True # apply SEO (add metadata, etc., support for Twitter and Facebook linking)
+  social-urls: True # include URL list on the homepage.
+  resume: True # include resume section on the homepage.
+  blogs: True # include blog posts listed in /_posts on the homepage.
+
+home-link-text: Return Home # text used for home link displayed on posts when home-link: True. Customise e.g.: "{{ site.name }}", "Home", "Back", etc.
 
 # includes links to personal sites in the website introduction, add/remove entries using template format
-personals:
+social-urls:
   #- name: Email
   #  url: this@that.com
   - name: GitHub
-    url: https://cutwell.github.io/
+    url: https://github.com/Cutwell
   - name: LinkedIn 
     url: https://www.linkedin.com/in/zacharysmith5/
-  #- name: Twitter 
-  #  url: https://twitter.com/username
 
 # academic/industry experience, add/remove entries using template format
 resume:
@@ -36,6 +47,7 @@ resume:
 # if website root is at subdirectory of domain URL (e.g.: "https://cutwell.github.io/mywebsite"), then write that URL here
 url: https://cutwell.github.io/featherweight
 
+google-site-verification: # add your verification token here (https://developers.google.com/site-verification/)
 
 
 ##### JEKYLL SETTINGS #####
@@ -44,7 +56,6 @@ permalink: /:title/
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-loading-lazy # adds loading="lazy" tags to images and iframes, rendering them once in view (supported browsers, ignored gracefully otherwise)
   - jekyll-zopfli # github auto-compresses to .gz, but Zopfli offers greater compression + saves time by pre-compressing instead of doing it on-the-fly
   - jekyll-brotli # Google compression that outperforms Zopfli, and has good support (although less than .gz, hence using both to provice fallback)
 

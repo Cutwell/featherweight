@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% if site.lang %}
+<html lang="{{ site.lang }}">
+{% endif %}
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% if page.title %}
+<title>{{ page.title }}</title>
+{% else if site.name %}
+<title>{{ site.name }}</title>
+{% endif %}
+
+{% if site.compression.favicon %}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/{{ site.favicon }}">
+{% else %}
+<link rel="icon" href="data:,">
+{% endif %}
+
+{% if site.compression.icon %}
+<link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png">
+<link rel="shortcut icon" sizes="192x192" href="/img/icon-192x192.png">
+<link rel="apple-touch-icon" href="/img/icon-192x192.png">
+{% endif %}
+
+<!-- include seo if enabled -->
+{% if site.compression.seo %}
+{% include seo.html %}
+{% endif %}
+
+<!-- include image styling if enabled and page is post -->
+{% if site.compression.css and page.layout == "post" %}
+<style>img{width:100%;height:auto}</style>
+{% endif %}
+
+</head>

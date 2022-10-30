@@ -1,23 +1,17 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
+<!-- include header.html -->
+{% include header.html %}
 
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml" />
-
-{% if site.compression.favicon %}
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/{{ site.favicon }}">
-{% else %}
-<link rel="icon" href="data:,">
-{% endif %}
-
-{% if site.compression.styling %}
-<body style="max-width:80ch;padding:3em 1em;margin:auto;line-height:1.6;font-size:1.25em;font-family:sans-serif;">
+<!-- include page css if enabled -->
+{% if site.compression.css %}
+<body style="max-width:80ch;padding:3em 1em;margin:auto;line-height:1.6;font-size:1.25em;font-family:sans-serif">
 {% endif %}
 
 {{ content }}
 
-</body>
+<!-- add page load time if enabled -->
+{% if site.compression.load-time %}
+<br><i>Page loaded in: <script>window.onload = function () {document.getElementById("loadTime").innerHTML = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;}</script><span id="loadTime"></span>ms</i>
+{% endif %}
