@@ -16,11 +16,11 @@
 
 <!-- generate for your own icon using https://realfavicongenerator.net/ -->
 {% if site.compression.favicon %}
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.apple-touch-icon }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.icon-32x32 }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.icon-64x64 }}">
-<link rel="manifest" href="{{ site.manifest }}">
-<link rel="mask-icon" href="{{ site.mask-icon.href }}" color="{{ site.mask-icon.color }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.apple-touch-icon | prepend: site.url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.icon-32x32 | prepend: site.url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.icon-64x64 | prepend: site.url }}">
+<link rel="manifest" href="{{ site.manifest | prepend: site.url }}">
+<link rel="mask-icon" href="{{ site.mask-icon.href | prepend: site.url }}" color="{{ site.mask-icon.color }}">
 <meta name="msapplication-TileColor" content="{{ site.msapplication-TileColor }}">
 <meta name="theme-color" content="{{ site.theme-color }}">
 {% else %}
