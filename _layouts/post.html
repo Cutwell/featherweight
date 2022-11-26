@@ -15,5 +15,6 @@ layout: default
 <br><hr>
 {% endif %}
 {% if site.compression.footer %}
-{% markdown _pages/contact.md %}
+{% capture contact %}{% include contact.md %}{% endcapture %}
+{{ contact | markdownify }}
 {% endif %}

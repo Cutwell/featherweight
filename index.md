@@ -5,7 +5,8 @@ layout: default
 
 An ultra-lightweight Jekyll theme, aiming to minimise bandwidth usage and deliver a bare-bones experience.
 
-{% markdown _pages/contact.md %}
+{% capture contact %}{% include contact.md %}{% endcapture %}
+{{ contact | markdownify }}
 
 _Blog posts_
 {% if site.compression.blogs and site.posts %}
