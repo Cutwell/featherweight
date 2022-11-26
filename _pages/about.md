@@ -1,1 +1,0 @@
-I'm a graduate in MSc Artifical Intelligence, looking for opportunities to enter industry!

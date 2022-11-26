@@ -13,9 +13,9 @@ description: A dev blog post, detailing how we developed Featherweight to delive
 * [RSS feeds](#rss-feeds)
 
 ## Customising the site
-The index page of the website can be customised using `_config.yml`. Update the site name, site author, homepage description metadata, website language, social media links, and your professional resume. You can also edit `_pages/about.md` for a longform biography / introduction using markdown.
+You can add or update content on the homepage by editing the `index.md` markdown file. Your contact details can be updated by editing the `_pages/contact.md` file, and the site name, site author, homepage description metadata, website language, etc., can be updated using `_config.yml`.
 
-There are also a number of compression options to enable/disable cosmetic details. Enabling `css` adds CSS styling (inspired by [58 bytes of CSS to look great nearly everywhere](https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41). Page footer and home-link adds social media links to post footer, and navigation from blog posts to the homepage. `load-time` prints the page load time to the homepage and blog posts, showing off how fast your website is!
+There are also a number of compression options to enable/disable cosmetic details. Enabling `css` adds CSS styling (inspired by [58 bytes of CSS to look great nearly everywhere](https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41) - customise the website CSS by editing `_includes/main.css`. Page footer and home-link adds social media links to post footer, and navigation from blog posts to the homepage. `load-time` prints the page load time to the homepage and blog posts, while `page-size` reports the total HTML page size; showing off the effectiveness of the theme!
 
 ## Writing a blog post
 ```
@@ -41,3 +41,13 @@ _[brotli](https://en.wikipedia.org/wiki/Brotli)_ compression is a newer and more
 
 ## RSS feeds
 Users can access an RSS feed of your blog from `https://yourgithubusername.github.io/feed`. This can be subscribed to using an RSS reader, or used to [display a list of your most recent blog posts in your GitHub profile README](https://github.com/Cutwell/Cutwell).
+
+## Embed your homepage into your GitHub README
+If you're hosting your site via GitHub, you can show your homepage within the README section of the repository. Your homepage is written using markdown, meaning you can copy/paste the content and have it render! 
+
+1. If including social media links, copy the separate `_pages/contact.md` content to replace the `{\% markdown _pages/contact.md \%}` liquid tag.
+2. If you want your latest blog posts to update without needing to copy-paste the website HTML, check out the [`gautamkrishnar/blog-post-workflow`](https://github.com/gautamkrishnar/blog-post-workflow) GitHub Action to read your own site's RSS feed and generate a blog list within your README.
+
+## Remote themes
+You can use `featherweight` as a remote theme - recieving the latest updates automatically!
+Follow GitHub's [guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) for using and customising remote themes. In short, override theme files by creating replacements in your own repository mirroring the original file location.

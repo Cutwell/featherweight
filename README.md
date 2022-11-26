@@ -32,8 +32,9 @@ When naming blog post files, use the `YYYY-MM-DD-title.md` convention, or else y
 
 |||
 |:--:|:--:|
-| _Config_ | Update site URL, social links, and CV experience using `_config.yml`. |
-| _About me_ | Customise the About Me section of the homepage by editing `_pages/about.md`. This is rendered as markdown at build time. |
+| _Config_ | Update site URL and othe default options using `_config.yml`. |
+| _Homepage_ | Customise your homepage by editing the `index.md` file. |
+| _Social media_ | Update your contact links for your homepage and post footer (optional) by editing `_pages/contact.md` |
 | _RSS_ | The RSS feed can be found at <https://yourgithubusername.github.io/feed>. |
 | _Sitemap_ | The sitemap can be found at <https://yourgithubusername.github.io/sitemap>. |
 | _Quickstart_ | Test your website locally by following the [Jekyll quickstart guide](https://jekyllrb.com/docs/). |
@@ -50,14 +51,17 @@ Many of these are entirely optional settings. If you're looking to create a trul
 |:--:|:--:|
 | _SEO_ | Enabling search engine optimisations will add metadata for search engines and sharing on social media. |
 | _Reading time_ | To display an estimated reading time for blog posts. |
-| _Change font_ | Customise fonts for text + footer by editing `_layouts/default.html` and `_layouts/post.html` inline CSS. |
-| _Load time_ | Show off your page load times at the foot of the homepage/blog posts. |
-| _Blog post footer_ | Display social media links below blog posts. |
-| _social-urls_, _resume_, _blogs_ | Toggle the display of each of these subsections on your homepage. |
-| _CSS_ | Add some basic styling, based on [58 bytes of CSS to look great nearly everywhere](https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41). Also add some basic image styling to blog posts, working in combination with `anti-image-reflow` to fit images to the blog width without causing jank. |
-| _favicon_, _icon_ | Both options require image urls. The favicon is the website icon, whilst the icon is used if the site is made into a webapp, or a shortcut on iOS devices, etc. `Favicon` accepts .ico, `icon` accepts .png of size 192x192. |
+| _Load time_ | Show off your page load times in the page footer. (Requires JS) |
+| _Page size_ | Report the webpage size in bytes, also displayed in the page footer. (Requires JS) |
+| _Social media footer_ | Display social media links below blog posts. |
+| _Blog list_ | Toggle the display of your blog list on the homepage. |
+| _CSS_ | Add some basic styling, based on [58 bytes of CSS to look great nearly everywhere](https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41). Also add some basic image styling to blog posts, working in combination with `anti-image-reflow` to fit images to the blog width without causing jank. Customise CSS by editing `_includes/main.css`. |
+| _Favicons_ | Generate icons for your site using [https://realfavicongenerator.net/](https://realfavicongenerator.net/), or disable favicons using `_config.yml` to use a low-byte-count alternative. Change file names or theme colours using `_config.yml`. |
 
 #### Dev
 1. Clone this repository: `git clone https://github.com/Cutwell/featherweight.git`
 2. Download the project dependencies: `bundle install`
 3. Run a local Jekyll server: `bundle exec jekyll serve`
+
+#### Credit
+feather by GREY Perspective from <a href="https://thenounproject.com/browse/icons/term/feather/" target="_blank" title="feather Icons">Noun Project</a>

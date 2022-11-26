@@ -6,12 +6,34 @@ layout: compress
 
 <!-- include page css if enabled -->
 {% if site.compression.css %}
-<body style="max-width:80ch;padding:3em 1em;margin:auto;line-height:1.6;font-size:1.25em;font-family:sans-serif">
+<style>{% include main.css %}</style>
 {% endif %}
 
 {{ content }}
 
+<!-- add linebreak for homepage styling, but not for posts -->
+{% if page.layout != 'post'  %}
+<br>
+{% endif %}
+
 <!-- add page load time if enabled -->
 {% if site.compression.load-time %}
-<br><i>Page loaded in: <script>window.onload = function () {document.getElementById("loadTime").innerHTML = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;}</script><span id="loadTime"></span>ms</i>
+<i id="lt" class="d"></i><br>
+{% endif %}
+
+<!-- report page size in bytes -->
+{% if site.compression.page-size %}
+<i id="ps" class="d"></i>
+{% endif %}
+
+<!-- load script tag if JS is needed -->
+{% if site.compression.page-size or site.compression.load-time  %}
+<script>
+{% if site.compression.page-size %}
+document.getElementById("ps").innerHTML="Size: "+document.documentElement.outerHTML.length+" bytes";
+{% endif %}
+{% if site.compression.load-time %}
+window.onload=function(){document.getElementById("lt").innerHTML="Load time: "+(window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart)+"ms"};
+{% endif %}
+</script>
 {% endif %}

@@ -7,11 +7,13 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 <i>Written on {{ page.date | date: "%B %e, %Y" }}</i>
-<br><i>{% include reading-time.html %}</i>
+<br><i class="d">{% include reading-time.html %}</i>
 
 {{ content }}
 
-{% if site.compression.footer %}
+{% if site.compression.footer or site.compression.load-time or site.compression-page-size %}
 <br><hr>
-<p>{% for link in site.social-urls %}{{ link.name }}: <a href="{{ link.url }}">{{ link.url}}</a><br>{% endfor %}</p>
+{% endif %}
+{% if site.compression.footer %}
+{% markdown _pages/contact.md %}
 {% endif %}

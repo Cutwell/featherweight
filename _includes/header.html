@@ -14,26 +14,22 @@
 <title>{{ site.name }}</title>
 {% endif %}
 
+<!-- generate for your own icon using https://realfavicongenerator.net/ -->
 {% if site.compression.favicon %}
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/{{ site.favicon }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.apple-touch-icon }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.icon-32x32 }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.icon-64x64 }}">
+<link rel="manifest" href="{{ site.manifest }}">
+<link rel="mask-icon" href="{{ site.mask-icon.href }}" color="{{ site.mask-icon.color }}">
+<meta name="msapplication-TileColor" content="{{ site.msapplication-TileColor }}">
+<meta name="theme-color" content="{{ site.theme-color }}">
 {% else %}
 <link rel="icon" href="data:,">
-{% endif %}
-
-{% if site.compression.icon %}
-<link rel="shortcut icon" type="image/png" href="{{ site.compression.icon }}">
-<link rel="shortcut icon" sizes="192x192" href="{{ site.compression.icon }}">
-<link rel="apple-touch-icon" href="{{ site.compression.icon }}">
 {% endif %}
 
 <!-- include seo if enabled -->
 {% if site.compression.seo %}
 {% include seo.html %}
-{% endif %}
-
-<!-- include image styling if enabled and page is post -->
-{% if site.compression.css and page.layout == "post" %}
-<style>img{max-width:100%;height:auto}</style>
 {% endif %}
 
 </head>

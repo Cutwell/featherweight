@@ -2,46 +2,38 @@
 name: Featherweight # (leave blank for no fallback/title element)
 
 # website author
-author: Zachary Smith
+author: Featherweight
 
 description: Featherweight is an ultra-lightweight Jekyll theme, aiming to minimise bandwidth usage and deliver a bare-bones experience.
 
 lang: en # replace with ISO 639-1 Language Code for your language (or leave empty to omit the lang setting)
 
-compression:
-  favicon: # (adds ~400 bytes) site favicon (filepath from root)
-  icon: # shortcut icon (usually .png of your favicon, sized 192x192)
+# favicons and icons, use data:, to display an empty icon for low byte cost
+icon-32x32: /favicon-32x32.png
+icon-64x64: /favicon-16x16.png
+manifest: /site.webmanifest
+apple-touch-icon: /apple-touch-icon.png
+mask-icon:
+  href: /safari-pinned-tab.svg
+  color: '#5bbad5'
+msapplication-TileColor: '#ffffff'
+theme-color: '#ffffff'
 
+compression:
   # True to enable, False to disable
-  css: True # (adds 115 bytes) minimal inline CSS styling, based on https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41. Imitates page viewer mode.
-  footer: True  # (40+length-of-social-links bytes) add personal links as footer to blog posts
-  home-link: True  # (105+homepage-URL bytes) add a home link to top left corner of blog posts, navigates to website root.
-  load-time: True # (240 bytes) show-off your page size + load speed top of the page (uses JS).
-  reading-time: True  # add reading time estimate to your blog posts.
+  css: True # minimal inline CSS styling, based on https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41.
+  footer: True  # add personal links as footer to blog posts
+  home-link: True  # add a home link to top left corner of blog posts, navigates to website root.
+  load-time: True # show-off your page size + load speed top of the page (uses JS).
+  reading-time: True # add reading time estimate to your blog posts.
   seo: True # apply SEO (add metadata, etc., support for Twitter and Facebook linking)
   social-urls: True # include URL list on the homepage.
   resume: True # include resume section on the homepage.
   blogs: True # include blog posts listed in /_posts on the homepage.
+  page-size: True # report page size (count of bytes in page source - approximate as bytes used in report not included)
+  favicon: True # include favicon info in page header
 
 home-link-text: Return Home # text used for home link displayed on posts when home-link: True. Customise e.g.: "{{ site.name }}", "Home", "Back", etc.
-
-# includes links to personal sites in the website introduction, add/remove entries using template format
-social-urls:
-  #- name: Email
-  #  url: this@that.com
-  - name: GitHub
-    url: https://github.com/Cutwell
-  - name: LinkedIn 
-    url: https://www.linkedin.com/in/zacharysmith5/
-
-# academic/industry experience, add/remove entries using template format
-resume:
-  - title: BSc Computer Science (1st)
-    company: University of Plymouth
-    dates: 2018-21
-  - title: MSc Artificial Intelligence
-    company: University of Plymouth
-    dates: 2021-22 
 
 # domain URL (use https to enforce SSL)
 # if website root is at subdirectory of domain URL (e.g.: "https://cutwell.github.io/mywebsite"), then write that URL here
