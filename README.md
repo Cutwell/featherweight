@@ -34,7 +34,7 @@ When naming blog post files, use the `YYYY-MM-DD-title.md` convention, or else y
 |:--:|:--:|
 | _Config_ | Update site URL and othe default options using `_config.yml`. |
 | _Homepage_ | Customise your homepage by editing the `index.md` file. |
-| _Social media_ | Update your contact links for your homepage and post footer (optional) by editing `_pages/contact.md` |
+| _Social media_ | Update your contact links for your homepage and post footer (optional) by editing `_includes_/contact.md` |
 | _RSS_ | The RSS feed can be found at <https://yourgithubusername.github.io/feed>. |
 | _Sitemap_ | The sitemap can be found at <https://yourgithubusername.github.io/sitemap>. |
 | _Quickstart_ | Test your website locally by following the [Jekyll quickstart guide](https://jekyllrb.com/docs/). |

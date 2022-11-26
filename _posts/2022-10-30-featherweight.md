@@ -13,7 +13,7 @@ description: A dev blog post, detailing how we developed Featherweight to delive
 * [RSS feeds](#rss-feeds)
 
 ## Customising the site
-You can add or update content on the homepage by editing the `index.md` markdown file. Your contact details can be updated by editing the `_pages/contact.md` file, and the site name, site author, homepage description metadata, website language, etc., can be updated using `_config.yml`.
+You can add or update content on the homepage by editing the `index.md` markdown file. Your contact details can be updated by editing the `_includes_/contact.md` file, and the site name, site author, homepage description metadata, website language, etc., can be updated using `_config.yml`.
 
 There are also a number of compression options to enable/disable cosmetic details. Enabling `css` adds CSS styling (inspired by [58 bytes of CSS to look great nearly everywhere](https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41) - customise the website CSS by editing `_includes/main.css`. Page footer and home-link adds social media links to post footer, and navigation from blog posts to the homepage. `load-time` prints the page load time to the homepage and blog posts, while `page-size` reports the total HTML page size; showing off the effectiveness of the theme!
 
@@ -45,7 +45,7 @@ Users can access an RSS feed of your blog from `https://yourgithubusername.githu
 ## Embed your homepage into your GitHub README
 If you're hosting your site via GitHub, you can show your homepage within the README section of the repository. Your homepage is written using markdown, meaning you can copy/paste the content and have it render! 
 
-1. If including social media links, copy the separate `_pages/contact.md` content to replace the {% raw %}{% markdown _pages/contact.md %}{% endraw %} liquid tag.
+1. If including social media links, copy the separate `_includes_/contact.md` content to replace the {% raw %}{% markdown _pages/contact.md %}{% endraw %} liquid tag.
 2. If you want your latest blog posts to update without needing to copy-paste the website HTML, check out the [`gautamkrishnar/blog-post-workflow`](https://github.com/gautamkrishnar/blog-post-workflow) GitHub Action to read your own site's RSS feed and generate a blog list within your README.
 
 ## Remote themes
