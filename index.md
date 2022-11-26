@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Zachary's Blog
 ---
 # Hi, I'm {{ site.author }}!
 
