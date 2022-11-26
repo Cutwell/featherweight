@@ -45,7 +45,7 @@ Users can access an RSS feed of your blog from `https://yourgithubusername.githu
 ## Embed your homepage into your GitHub README
 If you're hosting your site via GitHub, you can show your homepage within the README section of the repository. Your homepage is written using markdown, meaning you can copy/paste the content and have it render! 
 
-1. If including social media links, copy the separate `_pages/contact.md` content to replace the `{\% markdown _pages/contact.md \%}` liquid tag.
+1. If including social media links, copy the separate `_pages/contact.md` content to replace the {% raw %}{% markdown _pages/contact.md %}{% endraw %} liquid tag.
 2. If you want your latest blog posts to update without needing to copy-paste the website HTML, check out the [`gautamkrishnar/blog-post-workflow`](https://github.com/gautamkrishnar/blog-post-workflow) GitHub Action to read your own site's RSS feed and generate a blog list within your README.
 
 ## Remote themes
