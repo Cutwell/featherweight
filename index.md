@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zachary's Blog
+title: Featherweight
 ---
 # Hi, I'm {{ site.author }}!
 
