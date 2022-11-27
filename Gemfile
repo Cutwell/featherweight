@@ -39,7 +39,7 @@ gem "kramdown", "~> 2.4"
 gem 'jekyll-zopfli', '~> 2.5'
 gem 'jekyll-brotli', '~> 2.3'
 
-gem "jekyll-anti-image-reflow" # custom plugin in the _plugins folder
+gem 'anti_image_reflow', '~> 0.1'
 
 gem 'nokogiri', '~> 1.12', '>= 1.12.4'
 gem 'fastimage', '~> 2.2', '>= 2.2.5'
