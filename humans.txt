@@ -1,0 +1,13 @@
+/* TEAM */
+Theme Developer: Zachary Smith.
+Site: https://github.com/Cutwell
+Location: London, England.
+
+/* THANKS */
+
+
+/* SITE */
+Last update: 11/2022
+Standards: HTML5, CSS3
+Components:
+Software: Jekyll theme for minimalist blog posting.
