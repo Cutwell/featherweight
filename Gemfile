@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.2.2"
+gem 'jekyll', '~> 4.3', '>= 4.3.1'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -35,9 +35,6 @@ gem "webrick", "~> 1.7"
 
 gem "jekyll-sitemap", "~> 1.4"
 gem "kramdown", "~> 2.4"
-
-#gem 'liquid', '~> 3.0'
-#gem "liquid-c", "~> 4.0"
 
 gem 'jekyll-zopfli', '~> 2.5'
 gem 'jekyll-brotli', '~> 2.3'
