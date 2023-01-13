@@ -52,7 +52,7 @@ plugins:
   - jekyll-brotli # Google compression that outperforms Zopfli, and has good support (although less than .gz, hence using both to provice fallback)
   - anti_image_reflow # prevent page reflow while lazy-loading images
 
-include: ['_pages']
+include: ['_posts']
 
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks

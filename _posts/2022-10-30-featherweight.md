@@ -4,6 +4,8 @@ title: Developing a lightweight theme for Jekyll.
 description: A dev blog post, detailing how we developed Featherweight to deliver an optimised static blog experience.
 ---
 
+![feather logo](/_posts/2022-10-30-featherweight/feather.png)
+
 `Featherweight` was inspired by pages from the [1kb club](https://1kb.club/), a list of web pages weighing less than 1kb. In order to provide a feature-complete static blog experience, cosmetic features were added, but the minimalist experience can still achieve [< 1kb weight](https://github.com/Cutwell/1kb).
 
 ## Contents
