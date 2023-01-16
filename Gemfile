@@ -24,22 +24,14 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-# Performance-booster for watching directories on Windows
+## Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-
-# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
-# do not have a Java counterpart.
+## Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of #the gem
+## do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-
 gem "webrick", "~> 1.7"
-
 gem "jekyll-sitemap", "~> 1.4"
 gem "kramdown", "~> 2.4"
-
 gem 'jekyll-zopfli', '~> 2.5'
 gem 'jekyll-brotli', '~> 2.3'
-
-gem 'anti_image_reflow', '~> 0.1'
-
-gem 'nokogiri', '~> 1.12', '>= 1.12.4'
-gem 'fastimage', '~> 2.2', '>= 2.2.5'
+gem 'anti_image_reflow', '~> 0.1', '>= 0.1.9'

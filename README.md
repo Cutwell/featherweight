@@ -80,9 +80,15 @@ Many of these are entirely optional settings. If you're looking to create a trul
 | _Favicons_ | Generate icons for your site using [https://realfavicongenerator.net/](https://realfavicongenerator.net/), or disable favicons using `_config.yml` to use a low-byte-count alternative. Change file names or theme colours using `_config.yml`. |
 
 #### Dev
+_Build locally_
 1. Clone this repository: `git clone https://github.com/Cutwell/featherweight.git`
 2. Download the project dependencies: `bundle install`
 3. Run a local Jekyll server: `bundle exec jekyll serve`
+
+_Build .gem_
+1. Update version in `.gemspec`
+2. Build with `gem build featherweight.gemspec`
+3. Push to RubyGem with `gem push featherweight-x.x.x.gem`
 
 #### Credit
 feather by GREY Perspective from <a href="https://thenounproject.com/browse/icons/term/feather/" target="_blank" title="feather Icons">Noun Project</a>
