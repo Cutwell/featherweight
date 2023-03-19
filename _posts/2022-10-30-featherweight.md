@@ -53,3 +53,17 @@ If you're hosting your site via GitHub, you can show your homepage within the RE
 ## Remote themes
 You can use `featherweight` as a remote theme - recieving the latest updates automatically!
 Follow GitHub's [guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll) for using and customising remote themes. In short, override theme files by creating replacements in your own repository mirroring the original file location.
+
+## Cheatsheet
+
+|||
+|:--:|:--:|
+| _Config_ | Update site URL and othe default options using `_config.yml`. |
+| _Homepage_ | Customise your homepage by editing the `index.md` file. |
+| _Social media_ | Update your contact links for your homepage and post footer (optional) by editing `_includes_/contact.md` |
+| _RSS_ | The RSS feed can be found at <https://yourgithubusername.github.io/feed>. |
+| _Sitemap_ | The sitemap can be found at <https://yourgithubusername.github.io/sitemap>. |
+| _Quickstart_ | Test your website locally by following the [Jekyll quickstart guide](https://jekyllrb.com/docs/). |
+| _gzip compression_ | Files are compressed using [Zopfli](https://github.com/philnash/jekyll-zopfli) compression. GitHub GZip's files automatically before serving, but we can use more aggressive pre-compression to achieve better compression, and avoid server overhead to compress on-the-fly. Support seems to vary between browsers, and some will fallback to `.html`. |
+| _Brotli compression_ | We also compress files using Google's [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm. We serve `.gz` and `.html` as fallback, although `.br` [has good support](https://caniuse.com/brotli). |
+| _Page reflow protection_ | To prevent page-reflow whilst lazy-loading images, we set image height and width using `Cutwell/jekyll-anti-image-reflow` gem plugin. Note it will not override existing styling to loading, width or height attributes. |

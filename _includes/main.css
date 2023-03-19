@@ -4,12 +4,12 @@ body {
     margin: auto;
     line-height: 1.6;
     font-size: 1.25em;
-    font-family: Helvetica;
+    font-family: Helvetica
 }
 
 .d {
     font-size: medium;
-    color: grey;
+    color: grey
 }
 
 img {
@@ -18,5 +18,6 @@ img {
 }
 
 code {
-    white-space: pre-line;
+    white-space: pre-line
 }
+

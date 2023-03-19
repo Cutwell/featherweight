@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+{% if site.compression.css %}
+<style>{% include post.css %}</style>
+{% endif %}
+
 {% if site.compression.home-link %}
 <a style="position:absolute;top:0;left:0;margin:1em;color:inherit;font-size:1em;" href="{{ site.url }}">{% if site.home-link-text %}{{ site.home-link-text }}{% else %}Return Home{% endif %}</a>
 {% endif %}
