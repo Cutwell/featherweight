@@ -35,3 +35,4 @@ gem "kramdown", "~> 2.4"
 gem 'jekyll-zopfli', '~> 2.5'
 gem 'jekyll-brotli', '~> 2.3'
 gem 'anti_image_reflow', '~> 0.1', '>= 0.1.9'
+gem 'rouge'
