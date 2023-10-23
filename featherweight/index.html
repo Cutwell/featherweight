@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developing a lightweight theme for Jekyll.</title>
+<link rel="apple-touch-icon" sizes="180x180" href="https://cutwell.github.io/featherweight/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cutwell.github.io/featherweight/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cutwell.github.io/featherweight/favicon-16x16.png">
+<link rel="manifest" href="https://cutwell.github.io/featherweight/site.webmanifest">
+<link rel="mask-icon" href="https://cutwell.github.io/featherweight/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="A dev blog post, detailing how we developed Featherweight to deliver an optimised static blog experience.">
+<link rel="alternate" type="application/rss+xml" title="Featherweight" href="https://cutwell.github.io/featherweight/feed.xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://cutwell.github.io/featherweight/sitemap.xml">
+<link rel="canonical" href="https://cutwell.github.io/featherweight/featherweight/">
+<meta name="google-site-verification" content="">
+<meta property="og:title" content="Developing a lightweight theme for Jekyll.">
+<meta property="og:url" content="https://cutwell.github.io/featherweight/featherweight/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Featherweight">
+<meta property="og:description" content="A dev blog post, detailing how we developed Featherweight to deliver an optimised static blog experience.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Developing a lightweight theme for Jekyll.">
+<meta name="twitter:url" content="https://cutwell.github.io/featherweight/featherweight/">
+<meta name="twitter:description" content="A dev blog post, detailing how we developed Featherweight to deliver an optimised static blog experience.">
+<style>body { max-width: 80ch; padding: 3em 1em; margin: auto; line-height: 1.6; font-size: 1.25em; font-family: Helvetica } .d { font-size: medium; color: grey } img { max-width: 100%; height: auto } pre { overflow: auto; }</style>
+<style>table th, table td { padding: 6px 13px; border: 1px solid #d0d7de } table tr { border-top: 1px solid hsla(210, 18%, 87%, 1) } table tr:nth-child(2n) { background-color: #f6f8fa } table { border-spacing: 0; border-collapse: collapse }</style>
+</head>
+<body>
+<a style="position:absolute;top:0;left:0;margin:1em;color:inherit;font-size:1em;" href="https://cutwell.github.io/featherweight">Return Home</a><h1>Developing a lightweight theme for Jekyll.</h1>
+<i>Written on October 30, 2022</i> <br><i class="d"> 5 minutes to read. </i><p><img src="/_posts/2022-10-30-featherweight/feather.png" alt="feather logo" width="192" height="192" loading="lazy"></p>
+<p><code class="language-plaintext highlighter-rouge">Featherweight</code> was inspired by pages from the <a href="https://1kb.club/">1kb club</a>, a list of web pages weighing less than 1kb. In order to provide a feature-complete static blog experience, cosmetic features were added, but the minimalist experience can still achieve <a href="https://github.com/Cutwell/1kb">&lt; 1kb weight</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#customising-the-site">Customising the site</a></li>
+<li><a href="#writing-a-blog-post">Writing a blog post</a></li>
+<li><a href="#content-compression">Content compression</a></li>
+<li><a href="#rss-feeds">RSS feeds</a></li>
+</ul>
+<h2 id="customising-the-site">Customising the site</h2>
+<p>You can add or update content on the homepage by editing the <code class="language-plaintext highlighter-rouge">index.md</code> markdown file. Your contact details can be updated by editing the <code class="language-plaintext highlighter-rouge">_includes_/contact.md</code> file, and the site name, site author, homepage description metadata, website language, etc., can be updated using <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+<p>There are also a number of compression options to enable/disable cosmetic details. Enabling <code class="language-plaintext highlighter-rouge">css</code> adds CSS styling (inspired by <a href="https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41">58 bytes of CSS to look great nearly everywhere</a> - customise the website CSS by editing <code class="language-plaintext highlighter-rouge">_includes/main.css</code>. Page footer and home-link adds social media links to post footer, and navigation from blog posts to the homepage. <code class="language-plaintext highlighter-rouge">load-time</code> prints the page load time to the homepage and blog posts, while <code class="language-plaintext highlighter-rouge">page-size</code> reports the total HTML page size; showing off the effectiveness of the theme!</p>
+<h2 id="writing-a-blog-post">Writing a blog post</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: Developing featherweight
+description: A dev blog post, detailing how we developed Featherweight to deliver an optimised static blog experience.
+---
+
+Lorem ipsum..
+</code></pre></div></div>
+<p>Blog posts are compiled from <code class="language-plaintext highlighter-rouge">.md</code> files in the <code class="language-plaintext highlighter-rouge">/_posts</code> directory. The naming convention for posts is <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-the-blog.md</code>. The metadata inside the <code class="language-plaintext highlighter-rouge">---</code> tags details that this is a blog post, with a certain title and description. Detailing the title here automatically adds it to the page, whilst the description is used as part of the page metadata.</p>
+<h2 id="content-compression">Content compression</h2>
+<p>Webpages are often split into numerous sub-files, such as HTML, CSS, JS and images, all of which need to be served and compiled into the complete page. Compressing this content (using lossless or lossy algorithms) reduces the bandwidth required to download the files.</p>
+<p>Browser support for different compression techniques means we offer two compression options, as well as fallback uncompressed files for older browsers.</p>
+<p><em>gzip</em> compression (using <em><a href="https://github.com/philnash/jekyll-zopfli">zopfli</a></em>) produces <code class="language-plaintext highlighter-rouge">.gz</code> compressed files. GitHub Pages automatically applies this compression, however by pre-processing we can apply our own, more aggressive, compressions, as well as ensure non-GH users have access to this compression.</p>
+<p><em><a href="https://en.wikipedia.org/wiki/Brotli">brotli</a></em> compression is a newer and more efficient algorithm developed by Google. It has good support in modern browser releases, but can’t be utilised by older browsers, requiring us to offer the more-supported <code class="language-plaintext highlighter-rouge">.gz</code> compression as an alternative.</p>
+<h2 id="rss-feeds">RSS feeds</h2>
+<p>Users can access an RSS feed of your blog from <code class="language-plaintext highlighter-rouge">https://yourgithubusername.github.io/feed</code>. This can be subscribed to using an RSS reader, or used to <a href="https://github.com/Cutwell/Cutwell">display a list of your most recent blog posts in your GitHub profile README</a>.</p>
+<h2 id="embed-your-homepage-into-your-github-readme">Embed your homepage into your GitHub README</h2>
+<p>If you’re hosting your site via GitHub, you can show your homepage within the README section of the repository. Your homepage is written using markdown, meaning you can copy/paste the content and have it render!</p>
+<ol>
+<li>If including social media links, copy the separate <code class="language-plaintext highlighter-rouge">_includes_/contact.md</code> content to replace the {% markdown _pages/contact.md %} liquid tag.</li>
+<li>If you want your latest blog posts to update without needing to copy-paste the website HTML, check out the <a href="https://github.com/gautamkrishnar/blog-post-workflow"><code class="language-plaintext highlighter-rouge">gautamkrishnar/blog-post-workflow</code></a> GitHub Action to read your own site’s RSS feed and generate a blog list within your README.</li>
+</ol>
+<h2 id="remote-themes">Remote themes</h2>
+<p>You can use <code class="language-plaintext highlighter-rouge">featherweight</code> as a remote theme - recieving the latest updates automatically! Follow GitHub’s <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll">guide</a> for using and customising remote themes. In short, override theme files by creating replacements in your own repository mirroring the original file location.</p>
+<h2 id="cheatsheet">Cheatsheet</h2>
+<table>
+<thead><tr>
+<th style="text-align: center"> </th>
+<th style="text-align: center"> </th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align: center"><em>Config</em></td>
+<td style="text-align: center">Update site URL and othe default options using <code class="language-plaintext highlighter-rouge">_config.yml</code>.</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>Homepage</em></td>
+<td style="text-align: center">Customise your homepage by editing the <code class="language-plaintext highlighter-rouge">index.md</code> file.</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>Social media</em></td>
+<td style="text-align: center">Update your contact links for your homepage and post footer (optional) by editing <code class="language-plaintext highlighter-rouge">_includes_/contact.md</code>
+</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>RSS</em></td>
+<td style="text-align: center">The RSS feed can be found at <a href="https://yourgithubusername.github.io/feed">https://yourgithubusername.github.io/feed</a>.</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>Sitemap</em></td>
+<td style="text-align: center">The sitemap can be found at <a href="https://yourgithubusername.github.io/sitemap">https://yourgithubusername.github.io/sitemap</a>.</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>Quickstart</em></td>
+<td style="text-align: center">Test your website locally by following the <a href="https://jekyllrb.com/docs/">Jekyll quickstart guide</a>.</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>gzip compression</em></td>
+<td style="text-align: center">Files are compressed using <a href="https://github.com/philnash/jekyll-zopfli">Zopfli</a> compression. GitHub GZip’s files automatically before serving, but we can use more aggressive pre-compression to achieve better compression, and avoid server overhead to compress on-the-fly. Support seems to vary between browsers, and some will fallback to <code class="language-plaintext highlighter-rouge">.html</code>.</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>Brotli compression</em></td>
+<td style="text-align: center">We also compress files using Google’s <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> algorithm. We serve <code class="language-plaintext highlighter-rouge">.gz</code> and <code class="language-plaintext highlighter-rouge">.html</code> as fallback, although <code class="language-plaintext highlighter-rouge">.br</code> <a href="https://caniuse.com/brotli">has good support</a>.</td>
+</tr>
+<tr>
+<td style="text-align: center"><em>Page reflow protection</em></td>
+<td style="text-align: center">To prevent page-reflow whilst lazy-loading images, we set image height and width using <code class="language-plaintext highlighter-rouge">Cutwell/jekyll-anti-image-reflow</code> gem plugin. Note it will not override existing styling to loading, width or height attributes.</td>
+</tr>
+</tbody>
+</table>
+<br><hr>
+<ul>
+<li>GitHub: <a href="https://github.com/Cutwell/featherweight">https://github.com/Cutwell/featherweight</a>
+</li>
+<li>Creator: <a href="https://github.com/Cutwell">https://github.com/Cutwell</a>
+</li>
+</ul>
+<i id="lt" class="d"></i><br> <i id="ps" class="d"></i> <script> document.getElementById("ps").innerHTML="Size: "+document.documentElement.outerHTML.length+" bytes"; window.onload=function(){document.getElementById("lt").innerHTML="Load time: "+(window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart)+"ms"}; </script>
+</body>
+</html>

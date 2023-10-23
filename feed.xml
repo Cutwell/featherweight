@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+>
+	<channel>
+		<title>Featherweight</title>
+		<description>Featherweight is an ultra-lightweight Jekyll theme, aiming to minimise bandwidth usage and deliver a bare-bones experience.</description>		
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<link>https://cutwell.github.io/featherweight</link>
+		<atom:link href="https://cutwell.github.io/featherweight/feed.xml" rel="self" type="application/rss+xml" />
+		<lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate>
+
+        <!-- update default to max number of posts to render -->
+		
+		
+			<item>
+				<title>Developing a lightweight theme for Jekyll.</title>
+				
+				
+					<description>&lt;p&gt;&lt;img src=&quot;/_posts/2022-10-30-featherweight/feather.png&quot; alt=&quot;feather logo&quot; /&gt;&lt;/p&gt;
+</description>
+				
+				<pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+				<link>https://cutwell.github.io/featherweight/featherweight/</link>
+				<guid isPermaLink="true">https://cutwell.github.io/featherweight/featherweight/</guid>
+			</item>
+		
+	</channel>
+</rss>
